@@ -4,6 +4,9 @@ A working web application for the **Smart Weight-Sensing Retail Rack System** pr
 load cells report stock weight continuously, and RackSense turns every settled drop into a sale, a
 restock or a theft alert on a live shop dashboard, with the alert log exported to Excel.
 
+**Live demo:** https://racksense.onrender.com — press *Enter the demo shop* (free plan: the first
+request after 15 minutes idle takes about a minute to wake).
+
 This is the software half of the project — the ESP32 firmware contract is included, and a
 simulator stands in for real hardware so the whole flow can be demonstrated without the rack.
 

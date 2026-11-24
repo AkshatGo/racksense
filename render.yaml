@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: racksense
+    runtime: python
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: RACKSENSE_TZ
+        value: Asia/Kolkata
+      - key: RACKSENSE_SIM_SECONDS
+        value: "7"
+      - key: RACKSENSE_DEMO
+        value: "1"
